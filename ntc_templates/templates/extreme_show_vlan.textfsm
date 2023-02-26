@@ -1,0 +1,9 @@
+Value NAME (\S+)
+Value VID (\d+)
+Value IP (\S+)
+Value MASK (\d+)
+			
+Start
+  ^${NAME}\s+${VID}\s+${IP}\s+\/${MASK}\s+ -> Record
+  ^${NAME}\s+${VID}\s+${IP}\/${MASK}\s+ -> Record
+  ^${NAME}\s+${VID}\s+-+ -> Record
